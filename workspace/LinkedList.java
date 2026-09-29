@@ -123,13 +123,17 @@ public class LinkedList{
 
     while (!(next == null)){
       next = current.getNext();
-      current.setNext(previous)
+      current.setNext(previous);
       previous = current;
       current = next;
     }
 
     head = previous;
 
+  }
+
+  public void nReverse(int num){
+    
   }
 
 }
