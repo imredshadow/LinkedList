@@ -117,13 +117,18 @@ public class LinkedList{
   }
 
   public void reverse(){
-    ListNode previous = head;
-    ListNode current = null;
+    ListNode previous = null;
+    ListNode current = head;
     ListNode next = current.getNext();
 
     while (!(next == null)){
-      
+      next = current.getNext();
+      current.setNext(previous)
+      previous = current;
+      current = next;
     }
+
+    head = previous;
 
   }
 
